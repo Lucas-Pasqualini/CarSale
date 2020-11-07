@@ -16,5 +16,5 @@ public class Brand {
 
     @OneToMany
     @JoinColumn(name = "brand_id")
-    private Set<Car> carList = new HashSet<>();
+    private Set<Car> brandList = new HashSet<>();
 }
