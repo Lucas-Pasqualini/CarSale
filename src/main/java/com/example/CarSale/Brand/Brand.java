@@ -1,4 +1,6 @@
-package com.example.CarSale.Car;
+package com.example.CarSale.Brand;
+
+import com.example.CarSale.Car.Car;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

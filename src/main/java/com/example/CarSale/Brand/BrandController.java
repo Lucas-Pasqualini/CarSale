@@ -1,4 +1,4 @@
-package com.example.CarSale.Car;
+package com.example.CarSale.Brand;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
