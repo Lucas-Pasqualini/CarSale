@@ -1,4 +1,4 @@
-package com.example.CarSale.Brand;
+package com.example.CarSale.Adress;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,19 +9,19 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(path="/brand")
-public class BrandController {
+@RequestMapping(path = "/adress")
+public class AdressController {
 
     @Autowired
-    private BrandRepository brandRepository;
+    private AdressRepository adressRepository;
 
     @GetMapping
-    public Iterable<Brand> getBrand(){
-        return brandRepository.findAll();
+    public Iterable<Adress> getAdress(){
+        return adressRepository.findAll();
     }
 
-    @GetMapping("/{brandId}")
-    public Optional<Brand> getBrand(@PathVariable("brandId") int brandId){
-        return brandRepository.findById(brandId);
+    @GetMapping("/{adressId}")
+    public Optional<Adress> getAdress(@PathVariable("adressId") int adressId){
+        return adressRepository.findById(adressId);
     }
 }
