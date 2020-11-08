@@ -1,6 +1,5 @@
 package com.example.CarSale.Character;
 
-import com.example.CarSale.Car.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

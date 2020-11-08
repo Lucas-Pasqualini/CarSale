@@ -1,10 +1,8 @@
 package com.example.CarSale.Adress;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -20,8 +18,28 @@ public class AdressController {
         return adressRepository.findAll();
     }
 
-    @GetMapping("/{adressId}")
+    @GetMapping("search/{adressId}")
     public Optional<Adress> getAdress(@PathVariable("adressId") int adressId){
         return adressRepository.findById(adressId);
+    }
+
+    @PostMapping("add")
+    public Adress addAdress(@RequestBody Adress adress){
+        return adressRepository.save(adress);
+    }
+
+    @DeleteMapping("delete/{adressId}")
+    public void deleteAdress(@PathVariable("adressId") int adressId){
+        adressRepository.deleteById(adressId);
+    }
+
+    @PutMapping("update/{adressId}")
+    public ResponseEntity<Adress> updateAdress(@PathVariable("adressId") int adressId, @RequestBody Adress adressDetails) throws Exception {
+        Adress adress = adressRepository.findById(adressId)
+                .orElseThrow(() -> new Exception("Adress not found for this id :: " + adressId));
+
+        adress.setAdress(adressDetails.getAdress());
+        final Adress updatedAdress = adressRepository.save(adress);
+        return ResponseEntity.ok(updatedAdress);
     }
 }
