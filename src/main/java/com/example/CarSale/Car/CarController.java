@@ -39,7 +39,7 @@ public class CarController {
                 .orElseThrow(() -> new Exception("Car not found for this id :: " + carId));
 
         car.setName(carDetails.getName());
-        final Car updatedEmployee = carRepository.save(car);
-        return ResponseEntity.ok(updatedEmployee);
+        final Car updatedCar = carRepository.save(car);
+        return ResponseEntity.ok(updatedCar);
     }
 }

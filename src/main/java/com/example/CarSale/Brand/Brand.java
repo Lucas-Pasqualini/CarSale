@@ -2,12 +2,14 @@ package com.example.CarSale.Brand;
 
 import com.example.CarSale.Car.Car;
 import com.example.CarSale.Concessionary.Concessionary;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
+@Data
 public class Brand {
 
     @Id
