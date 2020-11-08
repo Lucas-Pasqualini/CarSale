@@ -1,10 +1,8 @@
 package com.example.CarSale.Car;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -20,8 +18,28 @@ public class CarController {
         return carRepository.findAll();
     }
 
-    @GetMapping("/{carId}")
+    @GetMapping("search/{carId}")
     public Optional<Car> getCar(@PathVariable("carId") int carId){
         return carRepository.findById(carId);
+    }
+
+    @PostMapping("add")
+    public Car addCar(@RequestBody Car car){
+        return carRepository.save(car);
+    }
+
+    @DeleteMapping("delete/{carId}")
+    public void deleteCar(@PathVariable("carId") int carId){
+        carRepository.deleteById(carId);
+    }
+
+    @PutMapping("update/{carId}")
+    public ResponseEntity<Car> updateCar(@PathVariable("carId") int carId, @RequestBody Car carDetails) throws Exception {
+        Car car = carRepository.findById(carId)
+                .orElseThrow(() -> new Exception("Car not found for this id :: " + carId));
+
+        car.setName(carDetails.getName());
+        final Car updatedEmployee = carRepository.save(car);
+        return ResponseEntity.ok(updatedEmployee);
     }
 }
