@@ -37,3 +37,14 @@ insert into concessionary(id, name, adress_id) values(2, 'concessionary 2', 2);
 insert into concessionary(id, name, adress_id) values(3, 'concessionary 3', 3);
 insert into concessionary(id, name, adress_id) values(4, 'concessionary 4', 4);
 insert into concessionary(id, name, adress_id) values(5, 'concessionary 5', 5);
+
+insert into brand_in_concessionary(brand_id, concessionary_id) values(1,1);
+insert into brand_in_concessionary(brand_id, concessionary_id) values(2,1);
+insert into brand_in_concessionary(brand_id, concessionary_id) values(3,2);
+insert into brand_in_concessionary(brand_id, concessionary_id) values(4,2);
+insert into brand_in_concessionary(brand_id, concessionary_id) values(5,3);
+insert into brand_in_concessionary(brand_id, concessionary_id) values(1,3);
+insert into brand_in_concessionary(brand_id, concessionary_id) values(2,4);
+insert into brand_in_concessionary(brand_id, concessionary_id) values(3,4);
+insert into brand_in_concessionary(brand_id, concessionary_id) values(4,5);
+insert into brand_in_concessionary(brand_id, concessionary_id) values(5,5);
