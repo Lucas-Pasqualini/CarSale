@@ -17,7 +17,7 @@ import java.util.Set;
 public class Adress {
 
     @Id
-    private String id;
+    private int id;
     private String adress;
 
     @OneToMany
