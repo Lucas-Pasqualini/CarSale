@@ -26,25 +26,17 @@ insert into car(id, name, brand_id, customer_id) values(8, 'Aventador',  4, 8);
 insert into car(id, name, brand_id, customer_id) values(9, 'Uracan',     4, 9);
 insert into car(id, name, brand_id, customer_id) values(10, '3008',      1, 10);
 
-insert into adress(id, adress) values(1,  'adress 1');
-insert into adress(id, adress) values(2,  'adress 2');
-insert into adress(id, adress) values(3,  'adress 3');
-insert into adress(id, adress) values(4,  'adress 4');
-insert into adress(id, adress) values(5,  'adress 5');
+insert into adress(id, adress) values(1,  '120, boulevard de l''Ouest B.P. 16 59651 VILLENEUVE D''ASCQ');
+insert into adress(id, adress) values(2,  '16 Rue du Haut de la Cruppe, 59650 Villeneuve-d''Ascq');
+insert into adress(id, adress) values(3,  'Route de Lille, 59113 Seclin');
+insert into adress(id, adress) values(4,  '2 Rue Bellini, 92800 Puteaux');
+insert into adress(id, adress) values(5,  'Avenue du Pont de Bois, 59260 Lille');
 
-insert into concessionary(id, name, adress_id) values(1, 'concessionary 1', 1);
-insert into concessionary(id, name, adress_id) values(2, 'concessionary 2', 2);
-insert into concessionary(id, name, adress_id) values(3, 'concessionary 3', 3);
-insert into concessionary(id, name, adress_id) values(4, 'concessionary 4', 4);
-insert into concessionary(id, name, adress_id) values(5, 'concessionary 5', 5);
+insert into concessionary(id, name, adress_id) values(1, 'Peugeot PSA RETAIL VILLENEUVE D''ASCQ', 1);
+insert into concessionary(id, name, adress_id) values(2, 'BMW', 2);
+insert into concessionary(id, name, adress_id) values(3, 'Ferrari Lille', 3);
+insert into concessionary(id, name, adress_id) values(4, 'Lamborghini Paris', 4);
+insert into concessionary(id, name, adress_id) values(5, 'CITROËN PSA RETAIL HELLEMMES', 5);
 
 insert into brand_in_concessionary(brand_id, concessionary_id) values(1,1);
-insert into brand_in_concessionary(brand_id, concessionary_id) values(2,1);
-insert into brand_in_concessionary(brand_id, concessionary_id) values(3,2);
-insert into brand_in_concessionary(brand_id, concessionary_id) values(4,2);
-insert into brand_in_concessionary(brand_id, concessionary_id) values(5,3);
-insert into brand_in_concessionary(brand_id, concessionary_id) values(1,3);
-insert into brand_in_concessionary(brand_id, concessionary_id) values(2,4);
-insert into brand_in_concessionary(brand_id, concessionary_id) values(3,4);
-insert into brand_in_concessionary(brand_id, concessionary_id) values(4,5);
-insert into brand_in_concessionary(brand_id, concessionary_id) values(5,5);
+insert into brand_in_concessionary(brand_id, concessionary_id) values(5,1);
