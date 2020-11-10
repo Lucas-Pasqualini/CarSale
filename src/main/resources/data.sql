@@ -38,5 +38,5 @@ insert into concessionary(id, name, adress_id) values(3, 'Ferrari Lille', 3);
 insert into concessionary(id, name, adress_id) values(4, 'Lamborghini Paris', 4);
 insert into concessionary(id, name, adress_id) values(5, 'CITROËN PSA RETAIL HELLEMMES', 5);
 
-insert into brand_in_concessionary(brand_id, concessionary_id) values(1,1);
-insert into brand_in_concessionary(brand_id, concessionary_id) values(5,1);
+insert into brand_concessionary(brand_id, concessionary_id) values(1,1);
+insert into brand_concessionary(brand_id, concessionary_id) values(5,1);
